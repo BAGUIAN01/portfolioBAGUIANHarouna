@@ -10,16 +10,20 @@ import {
   Facebook,
   Twitter,
   Instagram,
+  Linkedin
+
 } from "lucide-react";
+import { GithubIcon } from "./icons";
+import Link from "next/link";
 
 export const Sidebar: React.FC = () => {
   const [isActive, setIsActive] = useState(true);
 
   return (
-    <div className="">
-      <aside className="max-w-[250px] h-screen overflow-y-hidden mt-10 ml-12 p-6 rounded-lg border-md bg-eerie-black-2">
+    <div className="hidden md:block"> {/* Caché sur mobile, visible à partir de md */}
+      <aside className="max-w-[250px] h-screen overflow-y-auto mt-10 ml-12 p-6 rounded-lg border-md bg-eerie-black-2">
         <div className="flex flex-col items-center gap-4">
-        <div className="w-20 h-20 relative overflow-hidden rounded-xl bg-gradient-to-r from-gray-700 to-gray-600">
+          <div className="w-20 h-20 relative overflow-hidden rounded-xl bg-gradient-to-r from-gray-700 to-gray-600">
             <Image
               src="/images/BAGUIAN.jpg"
               alt="BAGUIAN Harouna"
@@ -28,7 +32,7 @@ export const Sidebar: React.FC = () => {
               objectPosition="center"
             />
           </div>
-
+          
           <div className="text-center">
             <h1 className="text-white text-xl font-bold mb-1">
               BAGUIAN Harouna
@@ -36,10 +40,10 @@ export const Sidebar: React.FC = () => {
             <p className="text-sm">IA/Data project Manager</p>
           </div>
         </div>
-
+        
         <div className="mt-6 flex flex-col justify-center items-center">
           <hr className="border-gray-700 my-4" />
-
+          
           <ul className="space-y-4">
             <ContactItem
               icon={<Mail />}
@@ -62,13 +66,14 @@ export const Sidebar: React.FC = () => {
               content="Nantes, France"
             />
           </ul>
-
+          
           <hr className="border-gray-700 my-4" />
-
+          
           <div className="flex justify-center space-x-4">
-            <SocialIcon icon={<Facebook />} />
-            <SocialIcon icon={<Twitter />} />
-            <SocialIcon icon={<Instagram />} />
+            <SocialIcon icon={<GithubIcon />} link="https://github.com/BAGUIAN01" />
+            <SocialIcon icon={<Linkedin />} link="https://www.linkedin.com/in/harouna-baguian-29812a20a/" />
+            <SocialIcon icon={<Facebook />} link="#"/>
+            <SocialIcon icon={<Instagram />} link="#"/>
           </div>
         </div>
       </aside>
@@ -90,11 +95,11 @@ const ContactItem: React.FC<{
   </li>
 );
 
-const SocialIcon: React.FC<{ icon: React.ReactNode }> = ({ icon }) => (
-  <a
-    href="#"
+const SocialIcon: React.FC<{ icon: React.ReactNode, link:string }> = ({ icon, link }) => (
+  <Link
+    href={link}
     className="bg-gray-800 p-2 rounded-full text-red-500 hover:bg-gray-700 transition-colors"
   >
     {icon}
-  </a>
+  </Link>
 );

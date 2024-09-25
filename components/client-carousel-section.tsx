@@ -6,9 +6,7 @@ import Image from 'next/image';
 import {
   Carousel,
   CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
+  CarouselItem
 } from "@/components/ui/carousel";
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -21,9 +19,9 @@ const ClientsCarouselSection: React.FC = () => {
   const clients: Client[] = [
     { name: "ToemeXpertise", logo: "/images/toemexpertise_logo.png" },
     { name: "Kderra soudure", logo: "/images/kderra_logo.png" },
-    { name: "Company C", logo: "/images/company-c.png" },
-    { name: "Company D", logo: "/images/company-d.png" },
-    { name: "Company E", logo: "/images/company-e.png" },
+    // { name: "Company C", logo: "/images/company-c.png" },
+    // { name: "Company D", logo: "/images/company-d.png" },
+    // { name: "Company E", logo: "/images/company-e.png" },
   ];
 
   return (

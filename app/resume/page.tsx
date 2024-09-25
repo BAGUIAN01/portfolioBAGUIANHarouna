@@ -7,7 +7,9 @@ import SkillsSection from "@/components/my-skills";
 export default function AboutPage() {
   return (
     <div className="w-full text-left">
-      <h1 className="text-3xl font-bold">My resume</h1>
+      <h2 className="inline-block text-3xl font-bold text-white">
+        <span className="border-b-2 border-red-500 pb-1">My Resume</span>
+      </h2>
       <EducationTimeline/>
       <ExperienceTimeline/>
       <SkillsSection/>

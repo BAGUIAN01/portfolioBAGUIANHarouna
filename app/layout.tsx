@@ -3,7 +3,6 @@ import { Metadata, Viewport } from "next";
 import { Link } from "@nextui-org/link";
 import clsx from "clsx";
 
-
 import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
 import { Sidebar } from "@/components/sidebar";
@@ -36,27 +35,23 @@ export default function RootLayout({
 }) {
   return (
     <html suppressHydrationWarning lang="en">
-     
       <body
         className={clsx(
-          "min-h-screen overflow-hidden mt-10 font-sans flex flex-row text-white bg-smoky_black antialiased",
-          fontSans.variable,
+          "min-h-screen overflow-hidden  font-sans flex flex-row text-white bg-smoky_black antialiased",
+          fontSans.variable
         )}
       >
-        <Sidebar/>
-        
      
-            <main className="mx-10 mt-10 overflow-hidden flex flex-col rounded-lg border-md bg-eerie-black-2 w-full">
-              <ScrollArea className="h-screen">
-              <PortfolioNavbar/>
-              <div className="p-6">
+       <Sidebar />
+        <main className="mx-10 mt-10 overflow-hidden flex flex-col rounded-lg border-md bg-eerie-black-2 w-full">
+          <ScrollArea className="h-screen">
+            <PortfolioNavbar />
+            <div className="p-6">
               {children}
-              </div>
-              </ScrollArea>
-            </main>
-            
-      
- 
+            </div>
+          </ScrollArea>
+        </main>
+   
       </body>
     </html>
   );

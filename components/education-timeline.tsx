@@ -37,7 +37,7 @@ const EducationTimeline: React.FC = () => {
   ];
 
   return (
-    <section className="timeline mb-8">
+    <section className="timeline mb-8 py-6">
       <div className="title-wrapper flex items-center gap-4 mb-6">
         <div className="icon-box bg-[hsl(240,2%,20%)] p-3 mt-4 rounded-full">
           <Book className="text-[#ff6b6b]" size={24} />
