@@ -114,7 +114,7 @@ const PortfolioSection: React.FC = () => {
           "Designed and developed a mobile app to test smarphone capteurs.",
         technologies: ["Android studio", "Java"],
         category: "Mobile Development",
-        imageUrl: "/images/ccapteurs_tester.jpg",
+        imageUrl: "/images/capteurs_tester.jpg",
         githubUrl: "https://github.com/BAGUIAN01/Kderra-website.git",
       },
       {
@@ -179,7 +179,7 @@ const PortfolioSection: React.FC = () => {
   );
 
   return (
-    <section className="mb-8 px-4 md:px-6 lg:px-8">
+    <section className="mb-8">
       <h2 className="inline-block text-3xl font-bold text-white">
         <span className="border-b-2 border-red-500 pb-1">Portfolio</span>
       </h2>

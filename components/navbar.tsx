@@ -84,7 +84,7 @@ export const PortfolioNavbar: React.FC = () => {
       </NavbarContent>
 
       <NavbarMenu
-        ref={menuRef}
+        // ref={menuRef}
         className="bg-eerie-black-2 pt-6 sm:hidden"
         style={{
           height: `${navItems.length * 10}px`,

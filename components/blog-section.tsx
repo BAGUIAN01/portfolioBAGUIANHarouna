@@ -41,7 +41,7 @@ const blogPosts: BlogPost[] = [
     imageUrl: '/images/ml-best-practices.jpg',
     readTime: '6 min read',
   },
-  // Add more blog posts as needed
+
 ];
 
 const BlogSection: React.FC = () => {
